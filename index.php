@@ -18,7 +18,7 @@ $height = isset($_GET['maxheight']) ? $_GET['maxheight'] : false;
 
 $oembed = array('type' => 'video',
 				'version' => '1.0',
-				'title' => $UKMTV->title
+				'title' => $UKMTV->title,
 				'author_name' => 'UKM Norge',
 				'author_url' => '://ukm.no',
 				'provider_name' => 'UKM-TV',
