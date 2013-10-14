@@ -10,6 +10,9 @@ $start = strlen('http://tv.ukm.no/');
 $stop  = strpos($url, '/', $start);
 $ID = substr($url, $start, $stop-$start);
 
+var_dump($url);
+var_dump($ID);
+
 $UKMTV = new tv($ID);
 
 var_dump($UKMTV);
