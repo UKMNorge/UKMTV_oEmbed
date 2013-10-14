@@ -2,6 +2,7 @@
 if(!isset($_GET['url'])) {
 	die(json_encode(false));
 }
+require_once('UKM/tv.class.php');
 
 $url = urldecode($_GET['url']);
 
