@@ -6,8 +6,12 @@ require_once('UKM/tv.class.php');
 
 $url = urldecode($_GET['url']);
 
-$start  = strrpos($url, '/');
-$ID = substr($url, $start+1);
+$parts = explode('/', $url);
+$IDstring = $parts[2];
+$subparts = explode('-', $url);
+$ID = $subparts[0];
+#$start  = strrpos($url, '/');
+#$ID = substr($url, $start+1);
 
 $UKMTV = new tv($ID);
 
