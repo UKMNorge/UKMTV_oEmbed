@@ -12,7 +12,7 @@ $subparts = explode('-', $url);
 $ID = $subparts[0];
 #$start  = strrpos($url, '/');
 #$ID = substr($url, $start+1);
-
+var_dump( $parts );
 $UKMTV = new tv($ID);
 
 if(!$UKMTV->id)
