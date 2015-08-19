@@ -10,11 +10,6 @@ $parts = explode('/', $url);
 $IDstring = $parts[ sizeof( $parts )-2 ];
 $subparts = explode('-', $IDstring);
 $ID = $subparts[0];
-#$start  = strrpos($url, '/');
-#$ID = substr($url, $start+1);
-var_dump( $parts );
-var_dump( $subparts );
-var_dump( $ID );
 $UKMTV = new tv($ID);
 
 if(!$UKMTV->id)
