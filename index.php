@@ -4,13 +4,9 @@ if(!isset($_GET['url'])) {
 }
 require_once('UKM/tv.class.php');
 
-$url = urldecode($_GET['url']);
-
-$parts = explode('/', $url);
-$IDstring = $parts[ sizeof( $parts )-2 ];
-$subparts = explode('-', $IDstring);
-$ID = $subparts[0];
-$UKMTV = new tv($ID);
+$urldata = array();
+preg_match("/\/([0-9]+)/", $_GET['url'], $urldata);
+$UKMTV = new tv($urldata[1]);
 
 if(!$UKMTV->id)
 	die(json_encode(false));
