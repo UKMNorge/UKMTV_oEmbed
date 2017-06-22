@@ -6,6 +6,10 @@ require_once('UKM/tv.class.php');
 
 $urldata = array();
 preg_match("/\/([0-9]+)/", $_GET['url'], $urldata);
+
+var_dump( $urldata[1] );
+
+// .*\/(\d{4}|info)\/(\d*)-[^\/]*
 $UKMTV = new tv($urldata[1]);
 
 if(!$UKMTV->id)
