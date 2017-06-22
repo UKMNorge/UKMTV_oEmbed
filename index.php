@@ -5,12 +5,14 @@ if(!isset($_GET['url'])) {
 require_once('UKM/tv.class.php');
 
 $urldata = array();
-preg_match("/.*\/(\d{4}|info)\/(\d*)-[^\/]*/", $_GET['url'], $urldata);
-
-var_dump( $urldata );
-
-preg_match("/\/([0-9]+)/", $_GET['url'], $urldata);
-$UKMTV = new tv($urldata[1]);
+preg_match("/.?\/(d{4}|info)\/(d+)-.\//", $_GET['url'], $urldata);
+if( sizeof( $urldata ) > 0 ) {
+	$id = $urldata[2];
+} else {
+	preg_match("/\/([0-9]+)/", $_GET['url'], $urldata);
+	$id = $urldata[1];
+}
+$UKMTV = new tv($id);
 
 
 // .?\/(d{4}|info)\/d+-.*\/
