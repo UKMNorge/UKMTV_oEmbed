@@ -5,7 +5,7 @@ if(!isset($_GET['url'])) {
 require_once('UKM/tv.class.php');
 
 $urldata = array();
-preg_match(".?\/(d{4}|info)\/d+-.*\/", $_GET['url'], $urldata);
+preg_match(".?\/(d{4}|info)\/d+-.\/", $_GET['url'], $urldata);
 
 var_dump( $urldata );
 
