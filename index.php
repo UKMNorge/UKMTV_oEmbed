@@ -14,8 +14,6 @@ if( sizeof( $urldata ) > 0 ) {
 }
 $UKMTV = new tv($id);
 
-
-// .?\/(d{4}|info)\/d+-.*\/
 if(!$UKMTV->id)
 	die(json_encode(false));
 	
