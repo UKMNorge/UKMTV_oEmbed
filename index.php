@@ -5,6 +5,8 @@ if(!isset($_GET['url'])) {
 require_once('UKM/tv.class.php');
 
 $urldata = array();
+var_dump( $_GET['url'] );
+var_dump( urldecode( $_GET['url'] ) );
 preg_match("/.?\/(d{4}|info)\/(d+)-.\//", $_GET['url'], $urldata);
 if( sizeof( $urldata ) > 0 ) {
 	$id = $urldata[2];
