@@ -12,6 +12,7 @@ if( sizeof( $urldata ) > 0 ) {
 	preg_match("/\/([0-9]+)/", $_GET['url'], $urldata);
 	$id = $urldata[1];
 }
+var_dump( $urldata );
 $UKMTV = new tv($id);
 
 if(!$UKMTV->id)
