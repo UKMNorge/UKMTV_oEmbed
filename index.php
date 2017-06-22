@@ -8,7 +8,9 @@ $urldata = array();
 preg_match("/.?\/(d{4}|info)\/(d+)-.\//", $_GET['url'], $urldata);
 if( sizeof( $urldata ) > 0 ) {
 	$id = $urldata[2];
+	echo 'NEW';
 } else {
+	echo 'OLD';
 	preg_match("/\/([0-9]+)/", $_GET['url'], $urldata);
 	$id = $urldata[1];
 }
